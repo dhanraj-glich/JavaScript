@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Rock Paper Scissors</h1>
+
+    <div class="icons">
+        <button id="Rock" onclick="check('Rock')"><img src="fist.png" alt="" />Rock</button>
+        <button id="Paper" onclick="check('Paper')"><img src=" hand-paper.png" alt="" />Paper</button>
+        <button id="Scissors" onclick="check('Scissors')"><img src="scissors.png" alt="" />Scissors</button>
+        <button id="show-result" onclick="showResult()">Show result</button>
+    </div>
+
+    <h2 id="result"> </h2>
+
+    <script>
+
+
+        // 0 -> Rock
+        // 1 -> Paper
+        // 2 -> Scissors
+
+        const printWin = 'You Won!';
+        function check(userInput) {
+
+            const randomIndex = Math.floor(Math.random() * 3);
+
+            const choice = ["Rock", "Paper", "Scissors"];
+
+            const computerChoice = choice[randomIndex];
+
+            if (userInput == computerChoice) {
+
+                document.getElementById("result").innerText =
+                    "You: " + userInput + " | Computer: " + computerChoice + "\nDraw!";
+                
+                alert('Draw!'+'\nComputer: ' + computerChoice + '\nYou: '+ userInput);
+            } else if ((userInput === "Rock" && computerChoice === "Scissors") ||
+                (userInput === "Paper" && computerChoice === "Rock") ||
+                (userInput === "Scissors" && computerChoice === "Paper")) {
+                document.getElementById("result").innerText =
+                    "You: " + userInput + " | Computer: " + computerChoice + "\nWin!";
+            } else {
+                document.getElementById("result").innerText =
+                    "You: " + userInput + " | Computer: " + computerChoice + "\nLost";
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

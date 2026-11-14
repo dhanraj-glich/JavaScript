@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+
+  <body>
+    <h1>Rock Paper Scissors Game</h1>
+
+    <button
+      onclick="
+        let randomNumber = Math.random();
+        let computerChoice = '';
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          computerChoice = 'Rock';
+        } else if (randomNumber >= 1 / 3 && randomNumber <= 2 / 3) {
+          computerChoice = 'Paper';
+        } else {
+          computerChoice = 'Scissors';
+        }
+
+        if (computerChoice === 'Rock') {
+          alert(
+            `Tie! \nComputer choice is: ${computerChoice} \n Your choice is Rock`,
+          );
+        } else if (computerChoice === 'Paper') {
+          alert(
+            `You lose. \nComputer choice is: ${computerChoice} \n your choice is Rock`,
+          );
+        } else {
+          alert(
+            `You Won! \nComputer choice is: ${computerChoice} \n your choice is Rock`,
+          );
+        }
+      "
+    >
+      <img src="fist.png" alt="">Rock
+    </button>
+
+    <button
+      onclick="
+        randomNumber = Math.random();
+        computerChoice = '';
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          computerChoice = 'Rock';
+        } else if (randomNumber >= 1 / 3 && randomNumber <= 2 / 3) {
+          computerChoice = 'Paper';
+        } else {
+          computerChoice = 'Scissors';
+        }
+
+        if (computerChoice === 'Rock') {
+          alert(
+            `You Win! \nComputer choice is: ${computerChoice} \nYour choice is Paper`,
+          );
+        } else if (computerChoice === 'Paper') {
+          alert(
+            `Tie!. \nComputer choice is: ${computerChoice} \nYour choice is Paper`,
+          );
+        } else {
+          alert(
+            `You Lose. \nComputer choice is: ${computerChoice} \nYour choice is Paper`,
+          );
+        }
+      "
+    >
+      <img src="hand-paper.png" alt="">Paper
+    </button>
+
+    <button
+      onclick="
+        randomNumber = Math.random();
+        computerChoice = '';
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          computerChoice = 'Rock';
+        } else if (randomNumber >= 1 / 3 && randomNumber <= 2 / 3) {
+          computerChoice = 'Paper';
+        } else {
+          computerChoice = 'Scissors';
+        }
+
+        if (computerChoice === 'Rock') {
+          alert(
+            `You Lose. \nComputer choice is: ${computerChoice} \nYour choice is Scissors`,
+          );
+        } else if (computerChoice === 'Paper') {
+          alert(
+            `You Won!. \nComputer choice is: ${computerChoice} \nYour choice is Scissors`,
+          );
+        } else {
+          alert(
+            `Tie. \nComputer choice is: ${computerChoice} \nYour choice is Scissors`,
+          );
+        }
+      "
+    >
+      <img src="scissors.png" alt="">Scissors
+    </button>
+  </body>
+</html>
